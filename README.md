@@ -33,8 +33,16 @@ make
 
 3. Run the following commands, substituting in your device and project information.
 
-<pre>
-make \
-cd bin \
-./iot_core_mqtt_client -p <i><b>PROJECT_ID</b></i> -d projects/<i><b>PROJECT_ID</b></i>/locations/<i><b>REGION</b></i>/registries/<i><b>REGISTRY_ID</b></i>/devices/<i><b>DEVICE_ID</b></i> -t /devices/<i><b>DEVICE_ID</b></i>/state
-</pre>
+```
+make
+
+```
+
+```
+cd bin 
+```
+
+```
+./iot_core_mqtt_client -p PROJECT_ID -d projects/PROJECT_ID/locations/REGION/registries/REGISTRY_ID/devices/DEVICE_ID -t /devices/DEVICE_ID/state
+
+```
