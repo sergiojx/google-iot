@@ -3,7 +3,7 @@
 ##[Google Cloud IoT Device SDK for Embedded C](https://github.com/GoogleCloudPlatform/iot-device-sdk-embedded-c)
 
 
-Generating an RSA key
+### Generating an RSA key
 You can generate a 2048-bit RSA key pair with the following commands:
 ```
 openssl genpkey -algorithm RSA -out rsa_private.pem -pkeyopt rsa_keygen_bits:2048  
