@@ -44,11 +44,11 @@ cd bin
 
 ```
 ./iot_core_mqtt_client -p PROJECT_ID -d projects/PROJECT_ID/locations/REGION/registries/REGISTRY_ID/devices/DEVICE_ID -t /devices/DEVICE_ID/state
-
+```
 ## gcloud
 ```
-sergio (master) mqtt_example $ gcloud pubsub subscriptions create projects/involuted-smile-246201/subscriptions/my-subscription --topic=projects/involuted-smile-246201/topics/variables-proton
-. . .
+sergio (master) mqtt_example $ gcloud pubsub subscriptions create projects/involuted-smile-246201/subscriptions/my-subscription --topic=projects/involuted-smile-246201/topics/variables-proton  
+. . .  
 Created subscription [projects/involuted-smile-246201/subscriptions/my-subscription].
 
 ```
