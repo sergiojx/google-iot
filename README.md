@@ -53,3 +53,86 @@ Created subscription [projects/involuted-smile-246201/subscriptions/my-subscript
 
 ```
 
+```
+sergio (master) mqtt_example $ node cloudiot_mqtt_example_nodejs.js \
+>     mqttDeviceDemo \
+>     --projectId=involuted-smile-246201 \
+>     --cloudRegion=us-central1 \
+>     --registryId=proton-registry \
+>     --deviceId=my-device \
+>     --privateKeyFile=rsa_private.pem \
+>     --numMessages=25 \
+>     --algorithm=RS256
+Google Cloud IoT Core MQTT example.
+connect
+Publishing message: proton-registry/my-device-payload-1
+Config message received: 
+Config message received: 
+Publishing message: proton-registry/my-device-payload-2
+Publishing message: proton-registry/my-device-payload-3
+Publishing message: proton-registry/my-device-payload-4
+Publishing message: proton-registry/my-device-payload-5
+Publishing message: proton-registry/my-device-payload-6
+Publishing message: proton-registry/my-device-payload-7
+Publishing message: proton-registry/my-device-payload-8
+Publishing message: proton-registry/my-device-payload-9
+Publishing message: proton-registry/my-device-payload-10
+Publishing message: proton-registry/my-device-payload-11
+Publishing message: proton-registry/my-device-payload-12
+Publishing message: proton-registry/my-device-payload-13
+Publishing message: proton-registry/my-device-payload-14
+Publishing message: proton-registry/my-device-payload-15
+Publishing message: proton-registry/my-device-payload-16
+Publishing message: proton-registry/my-device-payload-17
+Publishing message: proton-registry/my-device-payload-18
+Publishing message: proton-registry/my-device-payload-19
+Publishing message: proton-registry/my-device-payload-20
+Publishing message: proton-registry/my-device-payload-21
+Publishing message: proton-registry/my-device-payload-22
+Publishing message: proton-registry/my-device-payload-23
+Publishing message: proton-registry/my-device-payload-24
+Publishing message: proton-registry/my-device-payload-25
+Closing connection to MQTT. Goodbye!
+close
+
+```
+
+
+```
+sergio (master) mqtt_example $ gcloud pubsub subscriptions pull --auto-ack \
+>     projects/involuted-smile-246201/subscriptions/my-subscription
+┌─────────────────────────────────────┬─────────────────┬────────────────────────────────────┐
+│                 DATA                │    MESSAGE_ID   │             ATTRIBUTES             │
+├─────────────────────────────────────┼─────────────────┼────────────────────────────────────┤
+│ proton-registry/my-device-payload-5 │ 610622344257536 │ deviceId=my-device                 │
+│                                     │                 │ deviceNumId=2685979480751018       │
+│                                     │                 │ deviceRegistryId=proton-registry   │
+│                                     │                 │ deviceRegistryLocation=us-central1 │
+│                                     │                 │ projectId=involuted-smile-246201   │
+│                                     │                 │ subFolder=                         │
+└─────────────────────────────────────┴─────────────────┴────────────────────────────────────┘
+sergio (master) mqtt_example $ gcloud pubsub subscriptions pull --auto-ack     projects/involuted-smile-246201/subscriptions/my-subscription
+┌─────────────────────────────────────┬─────────────────┬────────────────────────────────────┐
+│                 DATA                │    MESSAGE_ID   │             ATTRIBUTES             │
+├─────────────────────────────────────┼─────────────────┼────────────────────────────────────┤
+│ proton-registry/my-device-payload-9 │ 610625453427657 │ deviceId=my-device                 │
+│                                     │                 │ deviceNumId=2685979480751018       │
+│                                     │                 │ deviceRegistryId=proton-registry   │
+│                                     │                 │ deviceRegistryLocation=us-central1 │
+│                                     │                 │ projectId=involuted-smile-246201   │
+│                                     │                 │ subFolder=                         │
+└─────────────────────────────────────┴─────────────────┴────────────────────────────────────┘
+sergio (master) mqtt_example $ gcloud pubsub subscriptions pull --auto-ack     projects/involuted-smile-246201/subscriptions/my-subscription
+┌─────────────────────────────────────┬─────────────────┬────────────────────────────────────┐
+│                 DATA                │    MESSAGE_ID   │             ATTRIBUTES             │
+├─────────────────────────────────────┼─────────────────┼────────────────────────────────────┤
+│ proton-registry/my-device-payload-4 │ 610625263851045 │ deviceId=my-device                 │
+│                                     │                 │ deviceNumId=2685979480751018       │
+│                                     │                 │ deviceRegistryId=proton-registry   │
+│                                     │                 │ deviceRegistryLocation=us-central1 │
+│                                     │                 │ projectId=involuted-smile-246201   │
+│                                     │                 │ subFolder=                         │
+└─────────────────────────────────────┴─────────────────┴────────────────────────────────────┘
+
+
+```
