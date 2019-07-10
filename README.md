@@ -143,3 +143,20 @@ sergio (master) mqtt_example $ gcloud pubsub subscriptions pull --auto-ack     p
 
 
 ```
+
+## C Mqtt example execition
+### Events
+Messages published to this MQTT topic are forwarded to the corresponding registry's default telemetry topic. The default telemetry topic is the Cloud Pub/Sub topic specified in the eventNotificationConfigs[i].pubsubTopicName field in the registry resource. If no default Pub/Sub topic exists, published telemetry data will be lost
+```
+./iot_core_mqtt_client -p involuted-smile-246201 -d projects/involuted-smile-246201/locations/us-central1/registries/proton-registry/devices/nano -t /devices/nano/events
+```
+### State
+```
+./iot_core_mqtt_client -p involuted-smile-246201 -d projects/involuted-smile-246201/locations/us-central1/registries/proton-registry/devices/nano -t /devices/nano/state
+```
+
+### Alerts
+```
+./iot_core_mqtt_client -p involuted-smile-246201 -d projects/involuted-smile-246201/locations/us-central1/registries/proton-registry/devices/nano -t /devices/nano/events/alerts
+
+```
