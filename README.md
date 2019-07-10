@@ -155,8 +155,12 @@ Messages published to this MQTT topic are forwarded to the corresponding registr
 ./iot_core_mqtt_client -p involuted-smile-246201 -d projects/involuted-smile-246201/locations/us-central1/registries/proton-registry/devices/nano -t /devices/nano/state
 ```
 
-### Alerts
+### subFolder/Alerts
 ```
 ./iot_core_mqtt_client -p involuted-smile-246201 -d projects/involuted-smile-246201/locations/us-central1/registries/proton-registry/devices/nano -t /devices/nano/events/alerts
 
+```
+### subFolder/Warnings
+```
+sergio (master *) bin $ ./iot_core_mqtt_client -p involuted-smile-246201 -d projects/involuted-smile-246201/locations/us-central1/registries/proton-registry/devices/nano -t /devices/nano/events/warnings
 ```
