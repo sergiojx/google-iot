@@ -144,6 +144,45 @@ sergio (master) mqtt_example $ gcloud pubsub subscriptions pull --auto-ack     p
 
 ```
 
+```
+sergio (master *) bin $ gcloud pubsub subscriptions pull --limit 5  --auto-ack projects/involuted-smile-246201/subscriptions/my-subscription
+┌──────────────────────────────┬─────────────────┬────────────────────────────────────┐
+│             DATA             │    MESSAGE_ID   │             ATTRIBUTES             │
+├──────────────────────────────┼─────────────────┼────────────────────────────────────┤
+│ Hello From Your IoTC client! │ 613723517315222 │ deviceId=nano                      │
+│                              │                 │ deviceNumId=2687375433246373       │
+│                              │                 │ deviceRegistryId=proton-registry   │
+│                              │                 │ deviceRegistryLocation=us-central1 │
+│                              │                 │ projectId=involuted-smile-246201   │
+│                              │                 │ subFolder=                         │
+│ Hello From Your IoTC client! │ 613728186857675 │ deviceId=nano                      │
+│                              │                 │ deviceNumId=2687375433246373       │
+│                              │                 │ deviceRegistryId=proton-registry   │
+│                              │                 │ deviceRegistryLocation=us-central1 │
+│                              │                 │ projectId=involuted-smile-246201   │
+│                              │                 │ subFolder=                         │
+│ Hello From Your IoTC client! │ 613724937068260 │ deviceId=nano                      │
+│                              │                 │ deviceNumId=2687375433246373       │
+│                              │                 │ deviceRegistryId=proton-registry   │
+│                              │                 │ deviceRegistryLocation=us-central1 │
+│                              │                 │ projectId=involuted-smile-246201   │
+│                              │                 │ subFolder=alerts                   │
+│ Hello From Your IoTC client! │ 613730472563410 │ deviceId=nano                      │
+│                              │                 │ deviceNumId=2687375433246373       │
+│                              │                 │ deviceRegistryId=proton-registry   │
+│                              │                 │ deviceRegistryLocation=us-central1 │
+│                              │                 │ projectId=involuted-smile-246201   │
+│                              │                 │ subFolder=alerts                   │
+│ Hello From Your IoTC client! │ 613724445726125 │ deviceId=nano                      │
+│                              │                 │ deviceNumId=2687375433246373       │
+│                              │                 │ deviceRegistryId=proton-registry   │
+│                              │                 │ deviceRegistryLocation=us-central1 │
+│                              │                 │ projectId=involuted-smile-246201   │
+│                              │                 │ subFolder=alerts                   │
+└──────────────────────────────┴─────────────────┴────────────────────────────────────┘
+
+```
+
 ## C Mqtt example execition
 ### Events
 Messages published to this MQTT topic are forwarded to the corresponding registry's default telemetry topic. The default telemetry topic is the Cloud Pub/Sub topic specified in the eventNotificationConfigs[i].pubsubTopicName field in the registry resource. If no default Pub/Sub topic exists, published telemetry data will be lost
