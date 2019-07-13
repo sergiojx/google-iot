@@ -251,6 +251,9 @@ IOTC_LIBCRYPTO_AVAILABLE := 1
 
 ```
 #### buid-mbedtls.sh
+Dont rely on automated compilatio. on third_party/tls/mbedtls/include/mbedtls config.h comment MBEDTLS_PLATFORM_C definition !!! 
+On make/mt-config/mt-tls-mbedtls.mk comment line "IOTC_CONFIG_FLAGS += -DMBEDTLS_PLATFORM_MEMORY"  
+This forces the the of libc standard calloc() and free()  as highlighted in [Let mbed TLS use static memory instead of the heap](https://tls.mbed.org/kb/how-to/using-static-memory-instead-of-the-heap)  
 ```
 #!/bin/bash
 # Copyright 2018-2019 Google LLC
