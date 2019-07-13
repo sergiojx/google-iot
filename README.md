@@ -305,3 +305,7 @@ echo "mbedTLS Build Complete."
 
 
 ```
+
+```
+sergio ((mbedtls-2.12.0) *) mbedtls $ make CC=/opt/codesourcery/arm-2011.09/bin/arm-none-linux-gnueabi-gcc AR=/opt/codesourcery/arm-2011.09/bin/arm-none-linux-gnueabi-ar SHARED=1
+```
