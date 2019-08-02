@@ -203,7 +203,12 @@ nano/state -f /home/giot/iot_core_mqtt_client/bin/ec_private.pem
 # ./iot_core_mqtt_client -p involuted-smile-246201 -d projects/involuted-smile-2
 46201/locations/us-central1/registries/proton-registry/devices/nano -t /devices/
 nano/state -f /jffs2/googleIoT/key/gkey1564171076428/ec_private.pem
-
+```
+```
+# ./iot_core_mqtt_client -p involuted-smile-246201 -d projects/involuted-smile-2
+46201/locations/us-central1/registries/proton-registry/devices/nano -t /devices/
+nano/state -f /jffs2/googleIoT/key/gkey1564171076428/ec_private.pem -q /tmp/goog
+leIoT/gdata1564171076428
 ```
 
 ### subFolder/Alerts
