@@ -329,3 +329,24 @@ echo "mbedTLS Build Complete."
 ```
 sergio ((mbedtls-2.12.0) *) mbedtls $ make CC=/opt/codesourcery/arm-2011.09/bin/arm-none-linux-gnueabi-gcc AR=/opt/codesourcery/arm-2011.09/bin/arm-none-linux-gnueabi-ar SHARED=1
 ```
+
+
+# gcloud
+## 
+[Cómo llevar a cabo la instalación con apt-get (Debian y Ubuntu solamente)](https://cloud.google.com/sdk/docs/downloads-apt-get)
+
+
+``` 
+sergio ~ $ gcloud pubsub subscriptions create projects/involuted-smile-246201/subscriptions/my-subscription --topic=projects/involuted-smile-246201/topics/variables-proton  
+ERROR: (gcloud.pubsub.subscriptions.create) You do not currently have an active account selected.  
+Please run:  
+  
+  $ gcloud auth login  
+  
+to obtain new credentials, or if you have already logged in with a  
+different account:  
+  
+  $ gcloud config set account ACCOUNT  
+  
+to select an already authenticated account to use.  
+```
