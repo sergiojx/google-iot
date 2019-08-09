@@ -350,3 +350,5 @@ different account:
   
 to select an already authenticated account to use.  
 ```
+# Build an IoT application with Google Cloud 
+[Build an IoT application with Google Cloud](https://hub.packtpub.com/build-google-cloud-iot-application/)
